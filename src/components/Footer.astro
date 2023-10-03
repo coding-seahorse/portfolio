@@ -1,1 +1,40 @@
-<p>@ 2023 | Designed and coded by Edward Byrne</p>
+---
+const currentYear = new Date().getFullYear();
+---
+
+
+<footer>
+    <p>
+        Designed and coded by <a
+            href="/"
+            rel="noopener noreferrer">Edward Byrne</a
+        >. Built with <a
+            href="https://astro.build/"
+            target="_blank"
+            rel="noopener noreferrer">Astro</a
+        > and hosted on <a
+            href="https://www.netlify.com/"
+            target="_blank"
+            rel="noopener noreferrer">Netlify</a
+        >.
+    </p>
+    <p>Copyright © {currentYear}</p>
+</footer>
+
+<style>
+    footer {
+        font-size: 1rem;
+        max-width: 400px;
+        padding: 3rem 0 5rem;
+        color: rgb(163 163 163);
+    }
+
+    a {
+        color: rgb(224, 224, 224);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: rgb(100,255,218);
+        }
+    }
+</style>

@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="socials-wrapper">
+    <a href="">
+        <Icon name="mdi:github" />
+    </a>
+    <a href="">
+        <Icon name="ri:linkedin-fill" />
+    </a>
+    <a href="">
+        <Icon name="mdi:instagram" />
+    </a>
+    <a href="">
+        <Icon name="mdi:twitter" />
+    </a>
+</div>
+
+<style lang="scss">
+    .socials-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: fixed;
+        bottom: 100px;
+        left: 40px;
+        width: 50px;
+    }
+    .socials-wrapper::after {
+        content: '';
+        width: 1px;
+        height: 50px;
+        background: white;
+        margin: 0 auto;
+    }
+
+    [astro-icon] {
+        color: #64ffda;
+        height: 30px;
+    }
+</style>

@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="icons-wrapper">
+    <a href="https://astro.build/" target="_blank">
+        <Icon name="astro-logo-light-gradient" />
+    </a>
+    <a href="https://astro.build/" target="_blank">
+        <Icon name="reactjs-ar21" />
+    </a>
+    <a href="https://astro.build/" target="_blank">
+        <div class="icon-wrapper">
+            <Icon name="simple-icons:framer" />
+            <span>Motion</span>
+        </div>
+    </a>
+    <a href="https://astro.build/" target="_blank">
+        <Icon name="logos:sass" />
+    </a>
+
+    <style lang="scss">
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .icons-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            max-width: 600px;
+            gap: 2rem;
+        }
+        .icon-wrapper {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            span {
+                font-weight: bold;
+                font-size: 1.7rem;
+            }
+        }
+
+        [astro-icon] {
+            height: 25px;
+        }
+        [astro-icon="reactjs-ar21"] {
+            height: 60px;
+        }
+    </style>
+</div>

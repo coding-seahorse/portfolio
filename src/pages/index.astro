@@ -1,25 +1,119 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Icons from "../components/Icons.astro";
+import Skills from "../components/Skills.astro";
+import { Image } from "astro:assets";
+import projectPopcorn from "../images/projectPopcorn.png";
+import projectBlog from "../images/project-blog.png";
+import projectCountdown from "../images/project-countdown.png";
+import projectPortfolio from "../images/project-portfolio.png";
+import projectTodo from "../images/project-todo.png";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<section class="hero">
-			<h1>Hello! <br>I am Edward</h1>
+			<h1>Edward Byrne</h1>
 			<div class="">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloremque et adipisci, ducimus libero cumque repudiandae velit deleniti distinctio accusantium quis necessitatibus nulla ut sit molestias magni debitis non pariatur quisquam modi quos cum, ab reiciendis! Deserunt facilis suscipit quisquam sequi nemo quaerat reprehenderit officiis, repellendus alias optio, facere excepturi?</p>
+				<p>
+					I'm a Front-End Web Developer based in Hertfordshire,
+					England, I enjoy creating clean, well-structured and
+					accessible websites. I am proficient in the following
+					frontend technologies:
+				</p>
 			</div>
+			<div class="skills-wrapper">
+				<Skills />
+			</div>
+		</section>
+		<section class="projects">
+			<h2>Some of my projects</h2>
+			<div class="projects-wrapper">
+				<a href="" class="project">
+					<div class="image-wrapper">
+						<Image
+							src={projectPopcorn}
+							alt="A bird sitting on a nest of eggs."
+						/>
+					</div>
+					<div class="text-wrapper">
+						<h4>Movie App</h4>
+						<span>React</span>
+					</div>
+				</a>
+
+				<a href="" class="project">
+					<div class="image-wrapper">
+						<Image
+							src={projectBlog}
+							alt="A bird sitting on a nest of eggs."
+						/>
+					</div>
+					<div class="text-wrapper">
+						<h4>Lorem, ipsum.</h4>
+						<span>Astro</span>
+					</div>
+				</a>
+
+				<a href="" class="project">
+					<div class="image-wrapper">
+						<Image
+							src={projectCountdown}
+							alt="A bird sitting on a nest of eggs."
+						/>
+					</div>
+					<div class="text-wrapper">
+						<h4>Lorem, ipsum.</h4>
+						<span>React</span>
+					</div>
+				</a>
+
+				<a href="" class="project">
+					<div class="image-wrapper">
+						<Image
+							src={projectTodo}
+							alt="A bird sitting on a nest of eggs."
+						/>
+					</div>
+					<div class="text-wrapper">
+						<h4>Lorem, ipsum.</h4>
+						<span>Astro</span>
+					</div>
+				</a>
+
+				<a href="" class="project">
+					<div class="image-wrapper">
+						<Image
+							src={projectPortfolio}
+							alt="A bird sitting on a nest of eggs."
+						/>
+					</div>
+					<div class="text-wrapper">
+						<h4>Lorem, ipsum.</h4>
+						<span>React</span>
+					</div>
+				</a>
+
+				<a href="" class="project">
+					<div class="image-wrapper">
+						<Image
+							src={projectPopcorn}
+							alt="A bird sitting on a nest of eggs."
+						/>
+					</div>
+					<div class="text-wrapper">
+						<h4>Lorem, ipsum.</h4>
+						<span>Astro</span>
+					</div>
+				</a>
+			</div>
+		</section>
+		<section class="contact">
+			<p>
+				Available for select freelance projects.
+				<a href="mailto:">edward@eddbyrne.com</a>
+			</p>
 			
-			<div class="icon-wrapper">
-				<div>.</div>
-				<div>.</div>
-				<div>.</div>
-				<div>.</div>
-				<div>.</div>
-				<div>.</div>
-				<div>.</div>
-			</div>
 		</section>
 	</main>
 </Layout>
@@ -31,25 +125,32 @@ import Card from '../components/Card.astro';
 		div {
 			background-color: white;
 			border-radius: 5px;
-			
 			height: 50px;
 			width: 50px;
 		}
 	}
 	main {
 		color: white;
-		padding: 0 10rem;
+		max-width: 1100px;
 	}
 	.hero {
+		padding-top: 13rem;
+		gap: 2.5rem;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding-top: 5rem;
+		span {
+			display: block;
+		}
+		p {
+			max-width: 550px;
+			font-size: 1.125rem;
+			line-height: 1.7;
+			margin: 0;
+		}
 	}
-	div {
-		max-width: 500px;
-	}
+
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -60,41 +161,78 @@ import Card from '../components/Card.astro';
 		z-index: -1;
 	}
 	h1 {
-		font-size: 4rem;
-		font-weight: 700;
+		font-size: 20px;
+		font-weight: 600;
 		line-height: 1;
-		
-		margin-bottom: 0;
+
+		margin: 0;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
+
+	// projects
+	.projects-wrapper {
+		a {
+			text-decoration: none;
+		}
+		a:hover > div > h4 {
+			color: rgb(100, 255, 218);
+		}
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		grid-template-columns: repeat(2, clamp(200px, 35vw, 450px));
 		gap: 2rem;
-		padding: 0;
+	}
+	.project {
+		display: block;
+	}
+	.image-wrapper {
+		background-color: #2a2e6c;
+		padding: 1.8rem 1.2rem;
+		border-radius: 5px;
+	}
+	img {
+		height: 100%;
+		width: 100%;
+	}
+	//contact
+	section {
+		p {
+			max-width: 550px;
+		}
+	}
+	.text-wrapper {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 0.5rem;
+		padding-top: 1rem;
+		span {
+			font-size: 12px;
+			font-weight: 500;
+			color: #64ffda;
+			background-color: #122b39;
+			border-radius: 9999px;
+			padding: 0.25rem 0.75rem;
+		}
+		p {
+			color: grey;
+		}
+		h4,
+		p {
+			color: white;
+			text-decoration: none;
+			font-size: 1.125rem;
+			margin: 0;
+		}
+	}
+	.contact {
+		display: flex;
+		flex-direction: column;
+		padding-top: 10rem;
+
+		a {
+			font-weight: 600;
+			text-decoration: none;
+			text-decoration: underline;
+			color: #64ffda;
+		}
 	}
 </style>
