@@ -22,7 +22,9 @@ const { title } = Astro.props;
 	<body>
 		<Socials />
 		<div class="container">
-			<slot />
+			<main>
+				<slot />
+			</main>
 			<Footer />
 		</div>
 	</body>
@@ -52,6 +54,11 @@ const { title } = Astro.props;
 		display: grid;
 		place-items: center;
 		font-size: 18px;
+		color: white;
+	}
+	main {
+		color: white;
+		max-width: 1100px;
 	}
 	code {
 		font-family:

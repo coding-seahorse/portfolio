@@ -1,0 +1,18 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+console.log(frontmatter);
+import { Icon } from "astro-icon";
+---
+
+<Layout title={frontmatter.title}>
+    <div class="blog-wrapper">
+        <a href="/">Back to homepage</a>
+
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.description}</p>
+        <div class="content">
+            <slot />
+        </div>
+    </div>
+</Layout>

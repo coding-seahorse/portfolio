@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Icons from "../components/Icons.astro";
 import Skills from "../components/Skills.astro";
 import { Image } from "astro:assets";
 import projectPopcorn from "../images/projectPopcorn.png";
@@ -11,111 +10,107 @@ import projectTodo from "../images/project-todo.png";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<section class="hero">
-			<h1>Edward Byrne</h1>
-			<div class="">
-				<p>
-					I'm a Front-End Web Developer based in Hertfordshire,
-					England, I enjoy creating clean, well-structured and
-					accessible websites. I am proficient in the following
-					frontend technologies:
-				</p>
-			</div>
-			<div class="skills-wrapper">
-				<Skills />
-			</div>
-		</section>
-		<section class="projects">
-			<h2>Some of my projects</h2>
-			<div class="projects-wrapper">
-				<a href="" class="project">
-					<div class="image-wrapper">
-						<Image
-							src={projectPopcorn}
-							alt="A bird sitting on a nest of eggs."
-						/>
-					</div>
-					<div class="text-wrapper">
-						<h4>Movie App</h4>
-						<span>React</span>
-					</div>
-				</a>
-
-				<a href="" class="project">
-					<div class="image-wrapper">
-						<Image
-							src={projectBlog}
-							alt="A bird sitting on a nest of eggs."
-						/>
-					</div>
-					<div class="text-wrapper">
-						<h4>Lorem, ipsum.</h4>
-						<span>Astro</span>
-					</div>
-				</a>
-
-				<a href="" class="project">
-					<div class="image-wrapper">
-						<Image
-							src={projectCountdown}
-							alt="A bird sitting on a nest of eggs."
-						/>
-					</div>
-					<div class="text-wrapper">
-						<h4>Lorem, ipsum.</h4>
-						<span>React</span>
-					</div>
-				</a>
-
-				<a href="" class="project">
-					<div class="image-wrapper">
-						<Image
-							src={projectTodo}
-							alt="A bird sitting on a nest of eggs."
-						/>
-					</div>
-					<div class="text-wrapper">
-						<h4>Lorem, ipsum.</h4>
-						<span>Astro</span>
-					</div>
-				</a>
-
-				<a href="" class="project">
-					<div class="image-wrapper">
-						<Image
-							src={projectPortfolio}
-							alt="A bird sitting on a nest of eggs."
-						/>
-					</div>
-					<div class="text-wrapper">
-						<h4>Lorem, ipsum.</h4>
-						<span>React</span>
-					</div>
-				</a>
-
-				<a href="" class="project">
-					<div class="image-wrapper">
-						<Image
-							src={projectPopcorn}
-							alt="A bird sitting on a nest of eggs."
-						/>
-					</div>
-					<div class="text-wrapper">
-						<h4>Lorem, ipsum.</h4>
-						<span>Astro</span>
-					</div>
-				</a>
-			</div>
-		</section>
-		<section class="contact">
+	<section class="hero">
+		<h1>Edward Byrne</h1>
+		<div class="">
 			<p>
-				Available for select freelance projects.
-				<a href="mailto:">edward@eddbyrne.com</a>
+				I'm a Front-End Web Developer based in Hertfordshire, England, I
+				enjoy creating clean, well-structured and accessible websites. I
+				am proficient in the following frontend technologies:
 			</p>
-			
-		</section>
-	</main>
+		</div>
+		<div class="skills-wrapper">
+			<Skills />
+		</div>
+	</section>
+	<section class="projects">
+		<h2>Some of my projects</h2>
+		<div class="projects-wrapper">
+			<a href="/posts/post-1/" class="project">
+				<div class="image-wrapper">
+					<Image
+						src={projectPopcorn}
+						alt="A bird sitting on a nest of eggs."
+					/>
+				</div>
+				<div class="text-wrapper">
+					<h4>Movie App</h4>
+					<span>React</span>
+				</div>
+			</a>
+
+			<a href="posts/post-2/" class="project">
+				<div class="image-wrapper">
+					<Image
+						src={projectBlog}
+						alt="A bird sitting on a nest of eggs."
+					/>
+				</div>
+				<div class="text-wrapper">
+					<h4>Lorem, ipsum.</h4>
+					<span>Astro</span>
+				</div>
+			</a>
+
+			<a href="posts/post-3/" class="project">
+				<div class="image-wrapper">
+					<Image
+						src={projectCountdown}
+						alt="A bird sitting on a nest of eggs."
+					/>
+				</div>
+				<div class="text-wrapper">
+					<h4>Lorem, ipsum.</h4>
+					<span>React</span>
+				</div>
+			</a>
+
+			<a href="posts/post-4/" class="project">
+				<div class="image-wrapper">
+					<Image
+						src={projectTodo}
+						alt="A bird sitting on a nest of eggs."
+					/>
+				</div>
+				<div class="text-wrapper">
+					<h4>Lorem, ipsum.</h4>
+					<span>Astro</span>
+				</div>
+			</a>
+
+			<a href="posts/post-5/" class="project">
+				<div class="image-wrapper">
+					<Image
+						src={projectPortfolio}
+						alt="A bird sitting on a nest of eggs."
+					/>
+				</div>
+				<div class="text-wrapper">
+					<h4>Lorem, ipsum.</h4>
+					<span>React</span>
+				</div>
+			</a>
+
+			<a href="posts/post-6/" class="project">
+				<div class="image-wrapper">
+					<Image
+						src={projectPopcorn}
+						alt="A bird sitting on a nest of eggs."
+					/>
+				</div>
+				<div class="text-wrapper">
+					<h4>Lorem, ipsum.</h4>
+					<span>Astro</span>
+				</div>
+			</a>
+		</div>
+	</section>
+	<section class="contact">
+		<p>
+			Available for select freelance projects.
+			<a href="mailto:">edward@eddbyrne.com</a>
+		</p>
+	</section>
 </Layout>
 
 <style lang="scss">
@@ -172,6 +167,10 @@ import projectTodo from "../images/project-todo.png";
 	.projects-wrapper {
 		a {
 			text-decoration: none;
+			transition: 0.5s ease-out;
+			&:hover {
+				transform: translateY(-0.5rem);
+			}
 		}
 		a:hover > div > h4 {
 			color: rgb(100, 255, 218);
