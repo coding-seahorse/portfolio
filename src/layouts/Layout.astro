@@ -1,6 +1,5 @@
 ---
 import Footer from "../components/Footer.astro";
-import Socials from "../components/Socials.astro";
 
 interface Props {
 	title: string;
@@ -20,7 +19,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Socials />
+		
 		<div class="container">
 			<main>
 				<slot />
@@ -29,17 +28,9 @@ const { title } = Astro.props;
 		</div>
 	</body>
 </html>
-<style is:global>
+<style lang="scss" is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		
 	}
 	* {
 		box-sizing: border-box;
@@ -56,9 +47,12 @@ const { title } = Astro.props;
 		font-size: 18px;
 		color: white;
 	}
+	.container {
+		padding: 0 2.5rem;
+	}
 	main {
 		color: white;
-		max-width: 1100px;
+		width: clamp(100px, 100vw, 1000px);
 	}
 	code {
 		font-family:

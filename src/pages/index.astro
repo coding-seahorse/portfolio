@@ -7,11 +7,14 @@ import projectBlog from "../images/project-blog.png";
 import projectCountdown from "../images/project-countdown.png";
 import projectPortfolio from "../images/project-portfolio.png";
 import projectTodo from "../images/project-todo.png";
+import { Icon } from "astro-icon";
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<section class="hero">
 		<h1>Edward Byrne</h1>
+
 		<div class="">
 			<p>
 				I'm a Front-End Web Developer based in Hertfordshire, England, I
@@ -19,12 +22,10 @@ import projectTodo from "../images/project-todo.png";
 				am proficient in the following frontend technologies:
 			</p>
 		</div>
-		<div class="skills-wrapper">
 			<Skills />
-		</div>
 	</section>
 	<section class="projects">
-		<h2>Some of my projects</h2>
+		<h2>My projects</h2>
 		<div class="projects-wrapper">
 			<a href="/posts/post-1/" class="project">
 				<div class="image-wrapper">
@@ -34,7 +35,7 @@ import projectTodo from "../images/project-todo.png";
 					/>
 				</div>
 				<div class="text-wrapper">
-					<h4>Movie App</h4>
+					<h3>Movie App</h3>
 					<span>React</span>
 				</div>
 			</a>
@@ -47,7 +48,7 @@ import projectTodo from "../images/project-todo.png";
 					/>
 				</div>
 				<div class="text-wrapper">
-					<h4>Lorem, ipsum.</h4>
+					<h3>Todo App</h3>
 					<span>Astro</span>
 				</div>
 			</a>
@@ -60,7 +61,7 @@ import projectTodo from "../images/project-todo.png";
 					/>
 				</div>
 				<div class="text-wrapper">
-					<h4>Lorem, ipsum.</h4>
+					<h3>Movie App</h3>
 					<span>React</span>
 				</div>
 			</a>
@@ -73,7 +74,7 @@ import projectTodo from "../images/project-todo.png";
 					/>
 				</div>
 				<div class="text-wrapper">
-					<h4>Lorem, ipsum.</h4>
+					<h3>Todo App</h3>
 					<span>Astro</span>
 				</div>
 			</a>
@@ -86,7 +87,7 @@ import projectTodo from "../images/project-todo.png";
 					/>
 				</div>
 				<div class="text-wrapper">
-					<h4>Lorem, ipsum.</h4>
+					<h3>Movie App</h3>
 					<span>React</span>
 				</div>
 			</a>
@@ -99,7 +100,7 @@ import projectTodo from "../images/project-todo.png";
 					/>
 				</div>
 				<div class="text-wrapper">
-					<h4>Lorem, ipsum.</h4>
+					<h3>Todo App</h3>
 					<span>Astro</span>
 				</div>
 			</a>
@@ -126,7 +127,6 @@ import projectTodo from "../images/project-todo.png";
 	}
 	main {
 		color: white;
-		max-width: 1100px;
 	}
 	.hero {
 		padding-top: 13rem;
@@ -159,37 +159,44 @@ import projectTodo from "../images/project-todo.png";
 		font-size: 20px;
 		font-weight: 600;
 		line-height: 1;
-
 		margin: 0;
+	}
+	h2 {
+		font-size: 18px;
+		padding-bottom: 2rem;
 	}
 
 	// projects
 	.projects-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, calc(50% - 1rem));
+		gap: 2rem;
+		@media (max-width: 800px) {
+			grid-template-columns: 100%;
+
+		}
 		a {
 			text-decoration: none;
 			transition: 0.5s ease-out;
-			&:hover {
-				transform: translateY(-0.5rem);
-			}
 		}
-		a:hover > div > h4 {
+		a:hover > div > h3 {
 			color: rgb(100, 255, 218);
 		}
-		display: grid;
-		grid-template-columns: repeat(2, clamp(200px, 35vw, 450px));
-		gap: 2rem;
+		a:hover {
+				transform: translateY(-0.5rem);
+			}
 	}
 	.project {
 		display: block;
 	}
 	.image-wrapper {
-		background-color: #2a2e6c;
-		padding: 1.8rem 1.2rem;
-		border-radius: 5px;
+		background-color: #877eff;
+		padding: 3rem 2.5rem;
 	}
 	img {
-		height: 100%;
 		width: 100%;
+		height: auto;
+		display: block;
 	}
 	//contact
 	section {
@@ -214,7 +221,7 @@ import projectTodo from "../images/project-todo.png";
 		p {
 			color: grey;
 		}
-		h4,
+		h3,
 		p {
 			color: white;
 			text-decoration: none;

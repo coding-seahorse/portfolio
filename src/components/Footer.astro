@@ -1,13 +1,13 @@
 ---
 const currentYear = new Date().getFullYear();
+import Socials from "../components/Socials.astro";
 ---
 
-
 <footer>
+    <Socials />
     <p>
-        Designed and coded by <a
-            href="/"
-            rel="noopener noreferrer">Edward Byrne</a
+        Designed and coded by <a href="/" rel="noopener noreferrer"
+            >Edward Byrne</a
         >. Built with <a
             href="https://astro.build/"
             target="_blank"
@@ -21,12 +21,15 @@ const currentYear = new Date().getFullYear();
     <p>Copyright © {currentYear}</p>
 </footer>
 
-<style>
+<style lang="scss">
     footer {
+        color: rgb(163 163 163);
         font-size: 1rem;
         max-width: 400px;
-        padding: 3rem 0 5rem;
-        color: rgb(163 163 163);
+        padding: 4rem 0 5rem;
+        @media (max-width: 950px) {
+            padding-top: 4rem;
+        }
     }
 
     a {
@@ -34,7 +37,7 @@ const currentYear = new Date().getFullYear();
         text-decoration: none;
         &:hover {
             text-decoration: underline;
-            color: rgb(100,255,218);
+            color: rgb(100, 255, 218);
         }
     }
 </style>

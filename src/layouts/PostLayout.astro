@@ -7,12 +7,99 @@ import { Icon } from "astro-icon";
 
 <Layout title={frontmatter.title}>
     <div class="blog-wrapper">
-        <a href="/">Back to homepage</a>
+        <a class="back-button" href="/">
+            <Icon name="arrow_icon" />
+            <span>Go back to homepage</span>
+        </a>
 
         <h1>{frontmatter.title}</h1>
-        <p>{frontmatter.description}</p>
+        <p class="blog-description">{frontmatter.description}</p>
         <div class="content">
             <slot />
         </div>
+
+        <h2>Technologies</h2>
+        <p class="blog-tech">
+            {frontmatter.technologies.map((tec) => <span>{tec}</span>)}
+        </p>
+        <h2>Website</h2>
+        <a
+            class="blog-links"
+            href="https://projectsnake.eddbyrne.com/"
+            target="_blank"
+            rel="noopener noreferrer">{frontmatter.website}</a
+        >
+        <h2>Github</h2>
+        <a
+            class="blog-links"
+            href="https://projectsnake.eddbyrne.com/"
+            target="_blank"
+            rel="noopener noreferrer">{frontmatter.github}</a
+        >
     </div>
 </Layout>
+
+<style lang="scss">
+    .blog-wrapper {
+        font-size: 18px;
+        margin-top: 8rem;
+        h1,
+        h2 {
+            font-size: 20px;
+        }
+        h2 {
+            margin-top: 3rem;
+        }
+    }
+
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 5rem;
+        text-decoration: none;
+        transition: 0.3s ease-out;
+        &:hover {
+            color: #64ffda;
+        }
+        &:hover > svg {
+            transform: translateX(-0.4rem);
+        }
+    }
+
+    [astro-icon] {
+        height: 30px;
+        color: rgb(255, 254, 254);
+        transition: 0.5s ease-out;
+
+    }
+
+    .blog-description {
+        color: grey;
+        font-weight: 600;
+    }
+
+    .blog-tech {
+        display: flex;
+        gap: 0.7rem;
+        margin: 0;
+
+        span {
+            font-size: 12px;
+            font-weight: 500;
+            color: #64ffda;
+            background-color: #122b39;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+        }
+    }
+    .blog-links {
+        color: #64ffda;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+</style>

@@ -4,6 +4,7 @@ title: 'My First Blog Post'
 description: 'This is the first post of my new Astro blog.'
 technologies: ['Astro', 'JavaScript', 'SASS']
 website: 'https://projectsnake.eddbyrne.com/'
+github: 'https://projectsnake.eddbyrne.com/'
 ---
 ![This is the alt text](../../images/project-todo.png)
 
