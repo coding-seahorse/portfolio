@@ -7,11 +7,9 @@ import projectBlog from "../images/project-blog.png";
 import projectCountdown from "../images/project-countdown.png";
 import projectPortfolio from "../images/project-portfolio.png";
 import projectTodo from "../images/project-todo.png";
-import { Icon } from "astro-icon";
-
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Edward Byrne">
 	<section class="hero">
 		<h1>Edward Byrne</h1>
 
@@ -22,7 +20,7 @@ import { Icon } from "astro-icon";
 				am proficient in the following frontend technologies:
 			</p>
 		</div>
-			<Skills />
+		<Skills />
 	</section>
 	<section class="projects">
 		<h2>My projects</h2>
@@ -115,6 +113,8 @@ import { Icon } from "astro-icon";
 </Layout>
 
 <style lang="scss">
+	@use "../styles/_variables.scss";
+
 	.icon-wrapper {
 		display: flex;
 		gap: 2rem;
@@ -124,9 +124,6 @@ import { Icon } from "astro-icon";
 			height: 50px;
 			width: 50px;
 		}
-	}
-	main {
-		color: white;
 	}
 	.hero {
 		padding-top: 13rem;
@@ -173,7 +170,6 @@ import { Icon } from "astro-icon";
 		gap: 2rem;
 		@media (max-width: 800px) {
 			grid-template-columns: 100%;
-
 		}
 		a {
 			text-decoration: none;
@@ -183,8 +179,8 @@ import { Icon } from "astro-icon";
 			color: rgb(100, 255, 218);
 		}
 		a:hover {
-				transform: translateY(-0.5rem);
-			}
+			transform: translateY(-0.5rem);
+		}
 	}
 	.project {
 		display: block;
@@ -213,7 +209,7 @@ import { Icon } from "astro-icon";
 		span {
 			font-size: 12px;
 			font-weight: 500;
-			color: #64ffda;
+			color: variables.$color-accent;
 			background-color: #122b39;
 			border-radius: 9999px;
 			padding: 0.25rem 0.75rem;
@@ -238,7 +234,7 @@ import { Icon } from "astro-icon";
 			font-weight: 600;
 			text-decoration: none;
 			text-decoration: underline;
-			color: #64ffda;
+			color: variables.$color-accent;
 		}
 	}
 </style>

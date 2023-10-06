@@ -22,22 +22,26 @@ import Socials from "../components/Socials.astro";
 </footer>
 
 <style lang="scss">
+    @use "../styles/_variables.scss";
+
     footer {
-        color: rgb(163 163 163);
+        color: variables.$color-primary;
         font-size: 1rem;
         max-width: 400px;
         padding: 4rem 0 5rem;
+
         @media (max-width: 950px) {
             padding-top: 4rem;
         }
     }
 
     a {
-        color: rgb(224, 224, 224);
+        color: variables.$color-accent;
         text-decoration: none;
+
         &:hover {
             text-decoration: underline;
-            color: rgb(100, 255, 218);
+            color: variables.$color-accent;;
         }
     }
 </style>

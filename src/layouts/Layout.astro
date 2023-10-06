@@ -1,10 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
-
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -19,7 +17,6 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		
 		<div class="container">
 			<main>
 				<slot />
@@ -28,41 +25,33 @@ const { title } = Astro.props;
 		</div>
 	</body>
 </html>
+
 <style lang="scss" is:global>
-	:root {
-		
-	}
+	@use "../styles/_variables.scss";
+
 	* {
 		box-sizing: border-box;
 	}
+
 	html {
 		font-family: system-ui, sans-serif;
-		background: #000000;
+		background: variables.$color-background;
 		background-size: 224px;
 	}
+
 	body {
 		margin: 0;
 		display: grid;
 		place-items: center;
 		font-size: 18px;
-		color: white;
+		color: variables.$color-primary;
 	}
+
 	.container {
 		padding: 0 2.5rem;
 	}
+
 	main {
-		color: white;
 		width: clamp(100px, 100vw, 1000px);
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>

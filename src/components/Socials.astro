@@ -18,6 +18,8 @@ import { Icon } from "astro-icon";
 </div>
 
 <style lang="scss">
+    @use "../styles/_variables.scss";
+
     .socials-wrapper {
         display: flex;
         flex-direction: column;
@@ -32,10 +34,10 @@ import { Icon } from "astro-icon";
             flex-direction: row;
         }
     }
-    
+
     [astro-icon] {
-        color: #64ffda;
-        height: 30px;
+        color: variables.$color-accent;
+        height: 25px;
         @media (max-width: 1200px) {
             color: rgb(163 163 163);
             height: 25px;

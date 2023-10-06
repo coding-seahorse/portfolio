@@ -2,27 +2,33 @@
     <a href="http://" target="_blank" rel="noopener noreferrer">React</a>
     <a href="http://" target="_blank" rel="noopener noreferrer">Astro</a>
     <a href="http://" target="_blank" rel="noopener noreferrer">JavaScript</a>
-    <a href="http://" target="_blank" rel="noopener noreferrer">Framer Motion</a>
+    <a href="http://" target="_blank" rel="noopener noreferrer">Framer Motion</a
+    >
     <a href="http://" target="_blank" rel="noopener noreferrer">SASS</a>
     <a href="http://" target="_blank" rel="noopener noreferrer">HTML5</a>
     <a href="http://" target="_blank" rel="noopener noreferrer">CSS3</a>
 </div>
 
-<style>
+<style lang="scss">
+    @use "../styles/_variables.scss";
+
     .skills-wrapper {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
     }
+
     a {
         padding-bottom: 0.5rem;
-        color: #64fff9;
-        border-bottom: 1px solid #64fff9;
+        color: variables.$color-accent;
+        border-bottom: 1px solid variables.$color-accent;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
-        cursor: pointer;
+        &:hover {
+            color: darken(variables.$color-accent, 25%);
+        }
     }
 </style>
