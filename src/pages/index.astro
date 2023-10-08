@@ -137,7 +137,6 @@ import projectTodo from "../images/project-todo.png";
 		}
 		p {
 			max-width: 550px;
-			font-size: 1.125rem;
 			line-height: 1.7;
 			margin: 0;
 		}
@@ -153,14 +152,17 @@ import projectTodo from "../images/project-todo.png";
 		z-index: -1;
 	}
 	h1 {
-		font-size: 20px;
+		font-size: var(--large);
 		font-weight: 600;
 		line-height: 1;
 		margin: 0;
 	}
 	h2 {
-		font-size: 18px;
+		font-size: var(--medium);
 		padding-bottom: 2rem;
+	}
+	p {
+		font-size: var(--medium);
 	}
 
 	// projects
@@ -207,9 +209,9 @@ import projectTodo from "../images/project-todo.png";
 		gap: 0.5rem;
 		padding-top: 1rem;
 		span {
-			font-size: 12px;
+			font-size: var(--smallest);
 			font-weight: 500;
-			color: var(--color-accent);
+			color: #959595;
 			background-color: #122b39;
 			border-radius: 9999px;
 			padding: 0.25rem 0.75rem;
@@ -219,9 +221,8 @@ import projectTodo from "../images/project-todo.png";
 		}
 		h3,
 		p {
-			color: white;
+			color: var(--color-primary);
 			text-decoration: none;
-			font-size: 1.125rem;
 			margin: 0;
 		}
 	}

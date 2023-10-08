@@ -38,26 +38,40 @@ const { title } = Astro.props;
 		background: var(--color-background);
 		background-size: 224px;
 
+		--color-background: #e6e6e6;
+		--color-primary: black;
+		--color-secondary: #808080;
+		--color-accent: #001aff;
+
+		--smallest: 0.875rem;
+		--small: 1rem;
+		--medium: 1.125rem;
+		--large: 1.25rem;
+	}
+
+	.dark {
 		--color-background: black;
 		--color-primary: white;
 		--color-secondary: #808080;
 		--color-accent: #64fff9;
 	}
 
-	html[data-theme="light"] {
-		background: var(--color-background);
-		--color-background: white;
-		--color-primary: black;
-		--color-secondary: #808080;
-		--color-accent: #fa64ff;
+	.accessibility-fontsize {
+		--smallest: 1.3rem;
+		--small: 1.6rem;
+		--medium: 1.7rem;
+		--large: 1.87rem;
 	}
 
 	body {
 		margin: 0;
 		display: grid;
 		place-items: center;
-		font-size: 18px;
 		color: var(--color-primary);
+	}
+	
+	h3 {
+		font-size: var(--medium);
 	}
 
 	.container {
