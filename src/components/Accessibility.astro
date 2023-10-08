@@ -1,0 +1,68 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="accessibility-wrapper">
+    <button class="theme-toggle" data-tooltip="Toggle dark/light mode">
+        <Icon name="ri:contrast-2-fill" />
+    </button>
+    <button class="font-toggle" data-tooltip="Toggle large font size">
+        <Icon name="ri:font-size-2" />
+    </button>
+</div>
+
+<style lang="scss">
+    .accessibility-wrapper {
+        display: flex;
+        gap: 1rem;
+        position: fixed;
+        bottom: 50px;
+        right: 100px;
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+    }
+    button::before,
+    button::after {
+        --scale: 0;
+
+        position: absolute;
+        top: -0.25rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+        transition: 50ms transform;
+        transform-origin: bottom center;
+    }
+
+    button::before {
+        transform: translateX(-50%) translateY(calc(-100% - 20px)) scale(var(--scale));
+
+        content: attr(data-tooltip);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        width: max-content;
+        text-align: center;
+        background-color: grey;
+    }
+    button::after {
+
+        content: '';
+        border: 10px solid transparent;
+        border-top-color: grey;
+        transform-origin: top center;
+    }
+    button:hover::before,
+    button:hover::after {
+        --scale: 1;
+    }
+
+    [astro-icon] {
+        height: 30px;
+        color: var(--color-accent);
+    }
+</style>

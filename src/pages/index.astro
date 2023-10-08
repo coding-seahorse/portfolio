@@ -21,6 +21,7 @@ import projectTodo from "../images/project-todo.png";
 			</p>
 		</div>
 		<Skills />
+
 	</section>
 	<section class="projects">
 		<h2>My projects</h2>
@@ -113,7 +114,6 @@ import projectTodo from "../images/project-todo.png";
 </Layout>
 
 <style lang="scss">
-	@use "../styles/_variables.scss";
 
 	.icon-wrapper {
 		display: flex;
@@ -209,7 +209,7 @@ import projectTodo from "../images/project-todo.png";
 		span {
 			font-size: 12px;
 			font-weight: 500;
-			color: variables.$color-accent;
+			color: var(--color-accent);
 			background-color: #122b39;
 			border-radius: 9999px;
 			padding: 0.25rem 0.75rem;
@@ -234,7 +234,7 @@ import projectTodo from "../images/project-todo.png";
 			font-weight: 600;
 			text-decoration: none;
 			text-decoration: underline;
-			color: variables.$color-accent;
+			color: var(--color-accent)
 		}
 	}
 </style>

@@ -22,10 +22,8 @@ import Socials from "../components/Socials.astro";
 </footer>
 
 <style lang="scss">
-    @use "../styles/_variables.scss";
-
     footer {
-        color: variables.$color-primary;
+        color: var(--color-secondary);
         font-size: 1rem;
         max-width: 400px;
         padding: 4rem 0 5rem;
@@ -36,12 +34,11 @@ import Socials from "../components/Socials.astro";
     }
 
     a {
-        color: variables.$color-accent;
+        color: var(--color-accent);
         text-decoration: none;
 
         &:hover {
             text-decoration: underline;
-            color: variables.$color-accent;;
         }
     }
 </style>
