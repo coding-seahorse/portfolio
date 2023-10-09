@@ -7,10 +7,10 @@ import { Icon } from "astro-icon";
 
 <Layout title={frontmatter.title}>
     <div class="blog-wrapper">
-        <a class="back-button" href="/">
+        <button onclick="history.back()">
             <Icon name="arrow_icon" />
             <span>Go back to homepage</span>
-        </a>
+        </button>
 
         <h1>{frontmatter.title}</h1>
         <p class="blog-description">{frontmatter.description}</p>
@@ -52,7 +52,10 @@ import { Icon } from "astro-icon";
         }
     }
 
-    .back-button {
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
         display: inline-flex;
         align-items: center;
         gap: 1rem;
@@ -73,7 +76,6 @@ import { Icon } from "astro-icon";
         height: 30px;
         color: rgb(255, 254, 254);
         transition: 0.5s ease-out;
-
     }
 
     .blog-description {
