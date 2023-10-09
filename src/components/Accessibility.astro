@@ -38,6 +38,10 @@ import { Icon } from "astro-icon";
   button::after {
     --scale: 0;
 
+    @media (max-width: 1400px) {
+      visibility: hidden;
+    }
+
     position: absolute;
     top: -0.25rem;
     left: 50%;
@@ -110,6 +114,6 @@ document
   .querySelector(".theme-toggle")
   .addEventListener("click", handleToggleClick);
 document
-    .querySelector(".font-toggle")
-    .addEventListener("click", handleFontToggleClick);
+  .querySelector(".font-toggle")
+  .addEventListener("click", handleFontToggleClick);
 </script>
