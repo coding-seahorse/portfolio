@@ -1,10 +1,12 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: 'My First Blog Post'
-description: 'This is the first post of my new Astro blog.'
-technologies: ['Astro', 'JavaScript', 'SASS']
-website: 'https://projectsnake.eddbyrne.com/'
-github: 'https://projectsnake.eddbyrne.com/'
+title: 'Landing Page'
+description: "A 'coming soon' landing page template."
+technologies: ['JavaScript', 'HTML5', 'CSS3']
+website: 'https://countdown.eddbyrne.com/'
+github: 'https://github.com/coding-seahorse/countdown-timer'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim enim, placerat eu mauris id, lobortis ullamcorper risus. Proin luctus suscipit justo. Proin euismod enim et dolor lobortis faucibus. Duis tincidunt velit eget sem laoreet, non imperdiet nunc pellentesque. Pellentesque cursus dui massa, sit amet condimentum massa vehicula a. Sed ac mi eu ex commodo.
+This was a project I made that serves as a 'coming soon' landing page for an online business, built in vanilla JavaScript.
+Although this was a simple website, it serves to demonstrate my understanding of DOM manipulation as well as being able to use JavaScript's built-in Date object.
+It was also my first time using Vanta.js, a javascript library that allows you to add animated backgrounds to a website.

@@ -1,10 +1,12 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: 'My First Blog Post'
-description: 'This is the first post of my new Astro blog.'
-technologies: ['Astro', 'JavaScript', 'SASS']
+title: 'Blog'
+description: 'A portfolio site with a blog page.'
+technologies: ['React', 'Strapi','Railway', 'Cloudinary', 'SASS']
 website: 'https://projectsnake.eddbyrne.com/'
 github: 'https://projectsnake.eddbyrne.com/'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim enim, placerat eu mauris id, lobortis ullamcorper risus. Proin luctus suscipit justo. Proin euismod enim et dolor lobortis faucibus. Duis tincidunt velit eget sem laoreet, non imperdiet nunc pellentesque. Pellentesque cursus dui massa, sit amet condimentum massa vehicula a. Sed ac mi eu ex commodo.
+This is a single page application (SPA) website built using React for the front-end and Strapi, an open-source headless content management system (CMS), for the back-end deployed on Railway, with media files hosted on Cludinary.
+
+It was my first time using a CMS and I was happily surprised by how easy and intuitive it felt to create collection types and access them through the API endpoints.

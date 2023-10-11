@@ -1,10 +1,14 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: 'My First Blog Post'
-description: 'This is the first post of my new Astro blog.'
+title: 'Portfolio'
+description: 'A fast, modern, and accessible portfolio website built with Astro.'
 technologies: ['Astro', 'JavaScript', 'SASS']
 website: 'https://projectsnake.eddbyrne.com/'
 github: 'https://projectsnake.eddbyrne.com/'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim enim, placerat eu mauris id, lobortis ullamcorper risus. Proin luctus suscipit justo. Proin euismod enim et dolor lobortis faucibus. Duis tincidunt velit eget sem laoreet, non imperdiet nunc pellentesque. Pellentesque cursus dui massa, sit amet condimentum massa vehicula a. Sed ac mi eu ex commodo.
+Rebuilt my portfolio site in Astro, a blazingly fast and ultra-performant static site generator, with excellent documentation and a supportive discord community.
+
+I used markdown files to write my content, Astro's image component to optimise my images, and its easy-to-use file-based routing to generate new routes. My site now has a perfect lighthouse score, very impressed!
+
+I'm excited to continue learning more about Astro and using it in future projects.

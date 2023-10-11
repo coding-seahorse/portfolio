@@ -7,7 +7,9 @@ import { Icon } from "astro-icon";
 
 <Layout title={frontmatter.title}>
     <div class="blog-wrapper">
-        <button onclick="history.back()">
+        <button onclick="
+        history.back()
+        ">
             <Icon name="arrow_icon" />
             <span>Go back to homepage</span>
         </button>
@@ -25,14 +27,14 @@ import { Icon } from "astro-icon";
         <h2>Website</h2>
         <a
             class="blog-links"
-            href="https://projectsnake.eddbyrne.com/"
+            href={frontmatter.website}
             target="_blank"
             rel="noopener noreferrer">{frontmatter.website}</a
         >
         <h2>Github</h2>
         <a
             class="blog-links"
-            href="https://projectsnake.eddbyrne.com/"
+            href={frontmatter.github}
             target="_blank"
             rel="noopener noreferrer">{frontmatter.github}</a
         >
@@ -41,14 +43,13 @@ import { Icon } from "astro-icon";
 
 <style lang="scss">
     .blog-wrapper {
-        font-size: 18px;
         margin-top: 8rem;
-        h1,
-        h2 {
-            font-size: 20px;
+        h1 {
+            font-size: var(--large);
         }
         h2 {
             margin-top: 3rem;
+            font-size: var(--medium);
         }
     }
 
@@ -70,17 +71,27 @@ import { Icon } from "astro-icon";
         &:hover > svg {
             transform: translateX(-0.4rem);
         }
+        span {
+            color: var(--color-primary);
+            font-size: var(--small);
+            font-weight: 700;
+        }
     }
 
     [astro-icon] {
         height: 30px;
-        color: rgb(255, 254, 254);
+        color: var(--color-primary);
         transition: 0.5s ease-out;
     }
 
     .blog-description {
-        color: grey;
+        color: var(--color-secondary);
         font-weight: 600;
+        font-size: var(--medium);
+    }
+    .content {
+        max-width: 800px;
+        font-size: var(--medium);
     }
 
     .blog-tech {
@@ -89,17 +100,18 @@ import { Icon } from "astro-icon";
         margin: 0;
 
         span {
-            font-size: 12px;
+            font-size: var(--smallest);
             font-weight: 500;
-            color: #64ffda;
+            color: #959595;
             background-color: #122b39;
             border-radius: 9999px;
             padding: 0.25rem 0.75rem;
         }
     }
     .blog-links {
-        color: #64ffda;
-        text-decoration: none;
+        color: var(--color-accent);
+        font-size: var(--medium);
+
         &:hover {
             text-decoration: underline;
         }

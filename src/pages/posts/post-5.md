@@ -1,10 +1,11 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: 'My First Blog Post'
-description: 'This is the first post of my new Astro blog.'
-technologies: ['Astro', 'JavaScript', 'SASS']
-website: 'https://projectsnake.eddbyrne.com/'
-github: 'https://projectsnake.eddbyrne.com/'
+title: 'Cat Gallery'
+description: 'A dynamic image gallery for users to endlessly scroll through cat pictures.'
+technologies: ['JavaScript', 'HTML5', 'CSS3']
+website: 'https://gallery.eddbyrne.com/'
+github: 'https://github.com/coding-seahorse/gallery-api'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim enim, placerat eu mauris id, lobortis ullamcorper risus. Proin luctus suscipit justo. Proin euismod enim et dolor lobortis faucibus. Duis tincidunt velit eget sem laoreet, non imperdiet nunc pellentesque. Pellentesque cursus dui massa, sit amet condimentum massa vehicula a. Sed ac mi eu ex commodo.
+Built in vanilla JavaScript, the purpose of this project was to learn to work with APIs, I figured the Cat API would be perfect for this, a public API all about cats!
+
