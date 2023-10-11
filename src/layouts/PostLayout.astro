@@ -21,9 +21,9 @@ import { Icon } from "astro-icon";
         </div>
 
         <h2>Technologies</h2>
-        <p class="blog-tech">
+        <div class="blog-tech">
             {frontmatter.technologies.map((tec) => <span>{tec}</span>)}
-        </p>
+        </div>
         <h2>Website</h2>
         <a
             class="blog-links"
@@ -95,7 +95,8 @@ import { Icon } from "astro-icon";
     }
 
     .blog-tech {
-        display: flex;
+        display: inline-flex;
+        flex-wrap: wrap;
         gap: 0.7rem;
         margin: 0;
 

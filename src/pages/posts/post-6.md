@@ -3,7 +3,7 @@ layout: "../../layouts/PostLayout.astro"
 title: 'Landing Page'
 description: "A 'coming soon' landing page template."
 technologies: ['JavaScript', 'HTML5', 'CSS3']
-website: 'https://countdown.eddbyrne.com/'
+website: 'https://countdown.eddbyrne.com'
 github: 'https://github.com/coding-seahorse/countdown-timer'
 ---
 
