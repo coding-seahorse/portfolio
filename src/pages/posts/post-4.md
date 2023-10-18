@@ -3,7 +3,7 @@ layout: "../../layouts/PostLayout.astro"
 title: 'Todo'
 description: 'A Todo app built with React.'
 image:
-    url: "../../public/todo.webm"
+    url: "https://res.cloudinary.com/dmbpntf42/video/upload/v1697654271/gifs/todo_ojgty3.webm"
     alt: 'The full Astro logo.'
 technologies: ['React', 'JavaScript']
 website: 'https://todo.eddbyrne.com'

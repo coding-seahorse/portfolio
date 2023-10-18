@@ -3,7 +3,7 @@ layout: "../../layouts/PostLayout.astro"
 title: 'Cat Gallery'
 description: 'A dynamic image gallery for users to endlessly scroll through cat pictures.'
 image:
-    url: "../../public/gallery.webm"
+    url: "https://res.cloudinary.com/dmbpntf42/video/upload/v1697654273/gifs/gallery_paqc4x.webm"
     alt: 'The full Astro logo.'
 technologies: ['JavaScript', 'TheCatApi', 'HTML5', 'CSS3']
 website: 'https://gallery.eddbyrne.com'

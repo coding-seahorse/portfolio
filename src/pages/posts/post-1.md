@@ -3,7 +3,7 @@ layout: "../../layouts/PostLayout.astro"
 title: 'Portfolio'
 description: 'A fast, modern, and accessible portfolio website built with Astro.'
 image:
-    url: "../../public/portfolio.webm"
+    url: "https://res.cloudinary.com/dmbpntf42/video/upload/v1697654269/gifs/portfolio_vpj1vl.webm"
     alt: 'The full Astro logo.'
 technologies: ['Astro', 'JavaScript', 'SASS']
 website: 'https://roaring-chimera-f3bbc7.netlify.app/'

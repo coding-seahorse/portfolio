@@ -4,7 +4,7 @@ title: 'Movie App'
 description: 'Movie app built in React'
 technologies: ['React','Framer Motion', 'TMDB API', 'SASS']
 image:
-    url: "../../public/popcorn.webm"
+    url: "https://res.cloudinary.com/dmbpntf42/video/upload/v1697654272/gifs/popcorn_xadvxe.webm"
     alt: 'The full Astro logo.'
 website: 'https://popcorn.eddbyrne.com'
 github: 'https://github.com/coding-seahorse/movie-app'

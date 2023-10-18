@@ -3,7 +3,7 @@ layout: "../../layouts/PostLayout.astro"
 title: 'Landing Page'
 description: "A 'coming soon' landing page template."
 image:
-    url: "../../public/countdown.webm"
+    url: "https://res.cloudinary.com/dmbpntf42/video/upload/v1697654271/gifs/countdown_rhyrqy.webm"
     alt: 'The full Astro logo.'
 technologies: ['JavaScript', 'HTML5', 'CSS3']
 website: 'https://countdown.eddbyrne.com'
