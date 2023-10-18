@@ -6,8 +6,8 @@ image:
     url: "../../public/portfolio.webm"
     alt: 'The full Astro logo.'
 technologies: ['Astro', 'JavaScript', 'SASS']
-website: 'https://projectsnake.eddbyrne.com'
-github: 'https://projectsnake.eddbyrne.com'
+website: 'https://roaring-chimera-f3bbc7.netlify.app/'
+github: 'https://github.com/coding-seahorse/portfolio'
 ---
 
 I recently Rebuilt my portfolio site in Astro, a blazingly fast and ultra-performant static site generator, with excellent documentation and a supportive Discord community.
