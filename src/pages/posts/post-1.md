@@ -10,7 +10,7 @@ website: 'https://roaring-chimera-f3bbc7.netlify.app/'
 github: 'https://github.com/coding-seahorse/portfolio'
 ---
 
-I recently Rebuilt my portfolio site in Astro, a blazingly fast and ultra-performant static site generator, with excellent documentation and a supportive Discord community.
+I recently rebuilt my portfolio site in Astro, a blazingly fast and ultra-performant static site generator, with excellent documentation and a supportive Discord community.
 
 I used markdown files to write my content, Astro's image component to optimise my images, and its easy-to-use file-based routing to generate new routes. My site now has a perfect lighthouse score; very impressed!
 
