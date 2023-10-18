@@ -2,6 +2,9 @@
 layout: "../../layouts/PostLayout.astro"
 title: 'Landing Page'
 description: "A 'coming soon' landing page template."
+image:
+    url: "../../public/countdown.webm"
+    alt: 'The full Astro logo.'
 technologies: ['JavaScript', 'HTML5', 'CSS3']
 website: 'https://countdown.eddbyrne.com'
 github: 'https://github.com/coding-seahorse/countdown-timer'

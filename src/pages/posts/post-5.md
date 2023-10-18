@@ -2,6 +2,9 @@
 layout: "../../layouts/PostLayout.astro"
 title: 'Cat Gallery'
 description: 'A dynamic image gallery for users to endlessly scroll through cat pictures.'
+image:
+    url: "../../public/gallery.webm"
+    alt: 'The full Astro logo.'
 technologies: ['JavaScript', 'TheCatApi', 'HTML5', 'CSS3']
 website: 'https://gallery.eddbyrne.com'
 github: 'https://github.com/coding-seahorse/gallery-api'

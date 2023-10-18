@@ -2,6 +2,9 @@
 layout: "../../layouts/PostLayout.astro"
 title: 'Blog'
 description: 'A portfolio site with a blog page.'
+image:
+    url: "../../public/blog.webm"
+    alt: 'The full Astro logo.'
 technologies: ['React', 'Strapi','Railway', 'Cloudinary','DayJS', 'EmailJS', 'SASS']
 website: 'https://projectsnake.eddbyrne.com'
 github: 'https://projectsnake.eddbyrne.com'

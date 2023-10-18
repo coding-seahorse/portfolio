@@ -2,6 +2,9 @@
 layout: "../../layouts/PostLayout.astro"
 title: 'Portfolio'
 description: 'A fast, modern, and accessible portfolio website built with Astro.'
+image:
+    url: "../../public/portfolio.webm"
+    alt: 'The full Astro logo.'
 technologies: ['Astro', 'JavaScript', 'SASS']
 website: 'https://projectsnake.eddbyrne.com'
 github: 'https://projectsnake.eddbyrne.com'

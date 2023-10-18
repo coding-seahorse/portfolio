@@ -2,6 +2,9 @@
 layout: "../../layouts/PostLayout.astro"
 title: 'Todo'
 description: 'A Todo app built with React.'
+image:
+    url: "../../public/todo.webm"
+    alt: 'The full Astro logo.'
 technologies: ['React', 'JavaScript']
 website: 'https://todo.eddbyrne.com'
 github: 'https://github.com/coding-seahorse/react-to-do'

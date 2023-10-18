@@ -15,7 +15,13 @@ import { Icon } from "astro-icon";
         </button>
 
         <h1>{frontmatter.title}</h1>
+        
         <p class="blog-description">{frontmatter.description}</p>
+        <video autoplay muted loop>
+            <source src={frontmatter.image.url} type="video/webm">
+          Your browser does not support the video tag.
+          </video>
+
         <div class="content">
             <slot />
         </div>
@@ -42,10 +48,15 @@ import { Icon } from "astro-icon";
 </Layout>
 
 <style lang="scss">
+
+    video {
+        width: clamp(100px, 80vw, 1000px);
+    }
     .blog-wrapper {
-        margin-top: 8rem;
+        margin-top: 5rem;
         h1 {
             font-size: var(--large);
+            margin-bottom: 0;
         }
         h2 {
             margin-top: 3rem;
@@ -88,9 +99,11 @@ import { Icon } from "astro-icon";
         color: var(--color-secondary);
         font-weight: 600;
         font-size: var(--medium);
+        margin: 0.6rem 0 2rem;
     }
     .content {
         max-width: 800px;
+        margin-top: 3rem;
         font-size: var(--medium);
     }
 
